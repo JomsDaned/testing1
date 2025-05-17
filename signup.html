@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Breakfree: The Animals</title>
+  <link rel="stylesheet" href="styles2.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <header class="header-container">
+    <h1>Breakfree: The Animals</h1>
+    <div class="search-bar">
+      <input type="text" placeholder="Search...">
+      <button>Search</button>
+    </div>
+  </header>
+<br>
+<nav>
+    <table>
+      <tr>
+        <td><a href="home.html">Home</a></td>
+        <td><a href="Aboutus.html">About us</a></td>
+        <td><a href="Moreinfo.html">More Info</a></td>
+        <td><a href="contactus.html">Contact us</a></td>
+        <td><a href="signup.html">Sign Up</a></td>
+        <td><a href="profile.html">Profile</a></td>
+      </tr>
+    </table>
+  </nav>
+  <style>
+    td:hover {
+      background-color: #75897b;
+      font-size: 18px;
+    }
+    </style>
+
+  <p>We speak up for animals so they can live free from harm. We believe every animal should be treated with care, love, and respect.</p>
+
+  <div class="form-with-image">
+    <form id="signupForm">
+      <label>First Name:
+        <input type="text" id="firstName" required>
+      </label>
+
+      <label>Last Name:
+        <input type="text" id="lastName" required>
+      </label>
+
+      <label>Sex:<br>
+        <input type="radio" name="sex" value="Male"> Male
+        <input type="radio" name="sex" value="Female"> Female
+        <input type="radio" name="sex" value="Prefer not to say"> Prefer not to say
+      </label>
+
+      <label>Email Address:
+        <input type="email" id="email" required>
+      </label>
+
+      <label>Password:
+        <input type="password" id="password" required>
+      </label>
+
+      <label>Why you support this campaign:
+        <textarea id="support" required></textarea>
+      </label>
+
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <img src="images/ty.png" alt="Thank You Dog" class="form-image">
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("signupForm");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const firstName = document.getElementById("firstName").value.trim();
+        const lastName = document.getElementById("lastName").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value;
+        const support = document.getElementById("support").value.trim();
+        const sexOptions = document.getElementsByName("sex");
+
+        let sex = "";
+        for (const option of sexOptions) {
+          if (option.checked) {
+            sex = option.value;
+            break;
+          }
+        }
+        if (!firstName || !lastName || !email || !password || !support || !sex) {
+          alert("*");
+          return;
+        }
+     
+
+        localStorage.setItem("firstName", firstName);
+        localStorage.setItem("lastName", lastName);
+        localStorage.setItem("email", email);
+        localStorage.setItem("sex", sex);
+        localStorage.setItem("support", support);
+
+        window.location.href = "profile.html";
+      });
+    });
+  </script>
+</body>
+</html>

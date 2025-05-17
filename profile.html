@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Profile</title>
+  <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+
+  <header class="header-container">
+    <h1>Breakfree: The Animals</h1>
+    <div class="search-bar">
+      <input type="text" placeholder="Search...">
+      <button>Search</button>
+    </div>
+  </header>
+  <br>
+  <br>
+  <nav>
+    <table>
+      <tr>
+        <td><a href="home.html">Home</a></td>
+        <td><a href="Aboutus.html">About us</a></td>
+        <td><a href="Moreinfo.html">More Info</a></td>
+        <td><a href="contactus.html">Contact us</a></td>
+        <td><a href="signup.html">Sign Up</a></td>
+        <td><a href="profile.html">Profile</a></td>
+      </tr>
+    </table>
+  </nav>
+  <style>
+    td:hover {
+      background-color: #75897b;
+      font-size: 18px;
+    }
+    </style>
+
+  <br>
+  <br>
+  <div class="border-box">
+    <h2>Your Profile</h2>
+    <p><b>First Name:</b> <span id="profileFirstName"></span></p>
+    <p><b>Last Name:</b> <span id="profileLastName"></span></p>
+    <p><b>Email:</b> <span id="profileEmail"></span></p>
+    <p><b>Sex:</b> <span id="profileSex"></span></p>
+    <p><b>Why I support this campaign:</b> <span id="profilesupport"></span></p>
+  </div>x
+<br>
+<br>
+  <script>
+    document.getElementById("profileFirstName").textContent = localStorage.getItem("firstName");
+    document.getElementById("profileLastName").textContent = localStorage.getItem("lastName");
+    document.getElementById("profileEmail").textContent = localStorage.getItem("email");
+    document.getElementById("profileSex").textContent = localStorage.getItem("sex");
+    document.getElementById("profilesupport").textContent = localStorage.getItem("support");
+  </script>
+
+</body>
+</html>

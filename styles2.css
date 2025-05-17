@@ -1,0 +1,156 @@
+body {
+    background-color: #2B3A33; 
+    color: #E8F5E9; 
+    margin: 0;
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: left;
+    margin-left: 10px;
+    color: #2c463c; 
+    font-family: Georgia, serif;
+    font-size: 300%;
+    font-weight: bold;
+    background-color: #cdd8d3; 
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #cdd8d3; 
+    border-radius: 10px;
+}
+
+.search-bar {
+    display: flex;
+}
+
+.search-bar input[type="text"] {
+    padding: 5px;
+    border: 1px solid #A7D7C5;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #3a564b;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+nav table {
+    border: 1px solid #A7D7C5; 
+    background-color: #3E5641; 
+    width: 50%;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 1em auto;
+    border-radius: 20px;
+    outline: 3px solid #A7D7C5;
+}
+
+p {
+    color: #E8F5E9; 
+    font-family: "Sans-serif";
+    font-size: 115%;
+    text-align: justify;
+    margin: 2em auto;
+    border: 2px solid #c9d7c9;
+    border-radius: 10px;
+    width: 90%;
+    padding: 8px;
+}
+
+a {
+    color: #efefef; 
+    text-decoration: none; 
+}
+
+b {
+    color: #A7D7C5; 
+    font-family: Georgia, serif;
+    font-size: 120%;
+    text-align: center;
+
+}
+a:visited {
+    color: rgb(255, 255, 255);
+    }
+
+    a:hover {
+        color:
+        rgb(181, 204, 181);
+        }
+        a:active {
+        color:
+        rgb(52, 68, 69);
+        }
+
+.form-with-image {
+    display: flex;
+    align-items: flex-start; 
+    justify-content: center;
+    gap: 3em;
+    margin: 3em auto;
+    max-width: 1100px;
+    padding: 0 1em;
+}
+
+
+#signupForm {
+    flex: 1;
+    max-width: 500px;
+    padding: 25px;
+    border: 3px solid #A7D7C5;
+    border-radius: 20px;
+    color: #ffffff;
+}
+
+#signupForm input[type="text"],
+#signupForm input[type="email"],
+#signupForm input[type="password"],
+#signupForm textarea {
+    width: 95%;
+    padding: 8px;
+    margin-top: 4px;
+    font-size: 16px;
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+#signupForm textarea {
+    height: 80px;
+}
+
+#signupForm button {
+    margin-top: 15px;
+    background-color: #a7cdbe;
+    color: rgb(0, 0, 0);
+    padding: 12px 25px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#signupForm button:hover {
+    background-color: #2c463c;
+    color: #ffffff;
+}
+
+.form-image {
+    flex-shrink: 0;
+    width: 480px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
